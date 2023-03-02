@@ -1,0 +1,51 @@
+[book]
+title = "Learn Rust The Hard Way"
+description = "笨办法学 Python 开创性构建了一种自学框架, 当然也可以用在 Rust..."
+authors = ["ZoomQuiet"]
+#language = "en"
+multilingual = false
+src = "src"
+base_url = "thw.rs.101.so"
+
+# Enables the `mdbook-template` preprocessor
+#[preprocessor.template]
+
+[build]
+build-dir = "docs"
+
+
+[preprocessor.rss]
+files-glob = "src/*.md"
+url-base = "https://thw.rs.101.so/"
+
+[output.html]
+#mathjax-support = true
+#site-url = "/mdBook/"
+git-repository-url = "https://github.com/zhrust/lrsthw/tree/main/src"
+#edit-url-template = "https://github.com/rust-lang/mdBook/edit/master/guide/{path}"
+
+
+[output.html.playpen]
+line-numbers = true
+#editable = true
+#editor = "ace"
+
+#[output.html.fold]
+#enable = true
+
+[output.html.search]
+limit-results = 20
+use-boolean-and = true
+boost-title = 2
+boost-hierarchy = 2
+boost-paragraph = 1
+expand = true
+heading-split-level = 2
+
+# book.toml
+#   230220 ++ cognitive-engineering-lab/aquascope
+#   : Interactive visualizations of Rust at compile-time and run-time https://github.com/cognitive-engineering-lab/aquascope
+#[preprocessor.aquascope]
+
+[rust]
+edition = "2021"
