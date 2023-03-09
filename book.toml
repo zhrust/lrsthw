@@ -19,20 +19,24 @@ files-glob = "src/*.md"
 url-base = "https://thw.rs.101.so/"
 
 [output.html]
-#mathjax-support = true
-#site-url = "/mdBook/"
+no-section-label = true
 git-repository-url = "https://github.com/zhrust/lrsthw/tree/main/src"
 #edit-url-template = "https://github.com/rust-lang/mdBook/edit/master/guide/{path}"
+#mathjax-support = true
+#site-url = "/mdBook/"
 
 
-[output.html.playpen]
+[output.html.playground]
+editable = true
 line-numbers = true
-#editable = true
-#editor = "ace"
+#copy-js = true
 
 [output.html.fold]
 enable = true
 #level = 1
+
+[output.html.print]
+enable = false
 
 [output.html.search]
 limit-results = 20
